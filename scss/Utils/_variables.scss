@@ -1,0 +1,15 @@
+$width: (
+  full: 100%,
+  half: 50%,
+);
+
+$colors: (
+  primary: #9356dc,
+  secondary: #ff79da,
+  tertiary: #99e2d0,
+  global-grey: #eaeaea,
+  white: #fff,
+  light-global-grey: lighten(#808080, 46%),
+  dark-global-grey: darken(#eaeaea, 70%),
+  l-dark-global-grey: darken(#eaeaea, 20%),
+);

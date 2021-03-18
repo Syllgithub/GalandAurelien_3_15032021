@@ -1,0 +1,50 @@
+@import "../Utils/functions";
+
+header {
+  width: set-width(full);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .logo {
+    height: 60px;
+    width: set-width(full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    box-shadow: 0 2px 5px id-colors(l-dark-global-grey);
+    img {
+      height: 30px;
+      width: 160px;
+      margin: auto;
+    }
+  }
+  .location-box {
+    width: set-width(full);
+    height: 50px;
+    background-color: id-colors(global-grey);
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+      width: 5%;
+      color: id-colors(dark-global-grey);
+    }
+    input {
+      border: 0;
+      width: 35%;
+      background-color: id-colors(global-grey);
+      font-family: "Roboto-bold";
+      &::placeholder {
+        text-align: center;
+        font-size: 1.1em;
+        color: id-colors(dark-global-grey);
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

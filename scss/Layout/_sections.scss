@@ -1,0 +1,31 @@
+@import "../Utils/functions";
+@import "../Components/buttons";
+
+.reservation {
+  height: 300px;
+  background-color: id-colors(light-global-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__body {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__title {
+    width: 90%;
+    &--h1 {
+      width: 70%;
+      font-size: 1.5em;
+      text-align: center;
+      font-family: "Roboto-bold";
+    }
+    &--h2 {
+      font-size: 1.1em;
+      text-align: center;
+      font-family: "Roboto-light";
+    }
+  }
+}

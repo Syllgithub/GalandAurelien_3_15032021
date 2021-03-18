@@ -1,0 +1,12 @@
+.btn {
+  text-decoration: none;
+  width: 215px;
+  height: 50px;
+  border-radius: 25px;
+  color: id-colors(white);
+  background-image: linear-gradient(id-colors(secondary), id-colors(primary));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 5px id-colors(l-dark-global-grey);
+}

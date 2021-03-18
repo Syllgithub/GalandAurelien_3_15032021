@@ -1,0 +1,9 @@
+@import "./variables";
+
+@function id-colors($color) {
+  @return map-get($colors, $color);
+}
+
+@function set-width($s-width) {
+  @return map-get($width, $s-width);
+}

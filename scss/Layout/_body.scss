@@ -1,0 +1,7 @@
+@import "../Utils/functions";
+@import "../Base/typography";
+
+body {
+  width: set-width(full);
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
