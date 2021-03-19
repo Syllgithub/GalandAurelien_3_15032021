@@ -251,7 +251,6 @@ header .location-box input:focus {
 
 .btn {
   text-decoration: none;
-  width: 215px;
   height: 50px;
   border-radius: 25px;
   color: #fff;
@@ -268,6 +267,12 @@ header .location-box input:focus {
           align-items: center;
   -webkit-box-shadow: 0 5px 5px #b7b7b7;
           box-shadow: 0 5px 5px #b7b7b7;
+}
+
+.operating-btn {
+  height: 60px;
+  background-color: whitesmoke;
+  border-radius: 10px;
 }
 
 .reservation {
@@ -315,5 +320,43 @@ header .location-box input:focus {
   font-size: 1.1em;
   text-align: center;
   font-family: "Roboto-light";
+}
+
+.reservation a {
+  width: 60%;
+}
+
+.operating {
+  border: 1px solid red;
+  /**/
+  height: 400px;
+  width: 90%;
+  margin: 20px auto auto auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.operating__title {
+  font-family: "Roboto-bold";
+  font-size: 1.5em;
+}
+
+.operating__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 /*# sourceMappingURL=main.css.map */

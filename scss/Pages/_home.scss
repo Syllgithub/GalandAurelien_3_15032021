@@ -28,4 +28,27 @@
       font-family: "Roboto-light";
     }
   }
+  a {
+    width: 60%;
+  }
+}
+
+.operating {
+  border: 1px solid red; /**/
+
+  height: 400px;
+  width: 90%;
+  margin: 20px auto auto auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  &__title {
+    font-family: "Roboto-bold";
+    font-size: 1.5em;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
