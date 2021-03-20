@@ -11,7 +11,8 @@
 }
 
 .operating-btn {
-  height: 60px;
+  height: 75px;
   background-color: id-colors(light-global-grey);
-  border-radius: 10px;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px id-colors(l-dark-global-grey);
 }

@@ -46,9 +46,39 @@
     font-family: "Roboto-bold";
     font-size: 1.5em;
   }
+  &__body {
+    height: 70%;
+  }
   &__list {
+    height: 100%;
+    border: 1px solid blue; /**/
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    li {
+      width: 96%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-left: auto;
+      span {
+        height: 25px;
+        width: 25px;
+        font-size: 0.9em;
+        border-radius: 50%;
+        color: id-colors(white);
+        background-color: id-colors(primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 5%;
+      }
+      i {
+        border: 1px solid red;
+        width: 20%;
+        font-size: 1.2em;
+      }
+    }
   }
 }
