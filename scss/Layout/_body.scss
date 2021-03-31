@@ -1,7 +1,12 @@
 @import "../Utils/functions";
+@import "../Utils/mixins";
 @import "../Base/typography";
 
 body {
   width: set-width(full);
   font-family: "Roboto", Arial, Helvetica, sans-serif;
+  @include desktop {
+    max-width: 1400px;
+    margin: auto;
+  }
 }
