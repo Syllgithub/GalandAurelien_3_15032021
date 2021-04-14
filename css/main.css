@@ -150,7 +150,7 @@ table {
 
 @font-face {
   font-family: "Roboto-medium";
-  src: url("../../media/fonts/Roboto/Roboto-Medium.ttf");
+  src: url("../media/fonts/Roboto/Roboto-Medium.ttf");
 }
 
 @font-face {
@@ -336,9 +336,6 @@ footer .footer__elements a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 95%;
   margin: auto;
 }
@@ -346,6 +343,7 @@ footer .footer__elements a {
 .menu-btn__text {
   white-space: nowrap;
   margin-left: 10px;
+  min-width: 50%;
   width: 80%;
   height: 100%;
   display: -webkit-box;
@@ -361,7 +359,9 @@ footer .footer__elements a {
 }
 
 .menu-btn__text strong {
+  width: 100%;
   text-overflow: ellipsis;
+  overflow: hidden;
   font-family: "Roboto-bold";
   font-size: 1.1em;
 }
@@ -377,8 +377,99 @@ footer .footer__elements a {
   font-family: "Roboto-bold";
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin-right: 20px;
   margin-bottom: 18px;
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 20%;
+  text-align: right;
+}
+
+.menu-btn .cont {
+  /*position: relative;*/
+  background-color: #99e2d0;
+  color: #99e2d0;
+  min-width: 70px;
+  margin-right: -70px;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.menu-btn .cont i {
+  background-color: #fff;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+
+.menu-btn:hover > .cont {
+  margin: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu-btn:hover > .cont i {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.menu-btn:focus {
+  outline: none;
+}
+
+.home-header,
+.location-box,
+.home-main {
+  -webkit-animation: spinner-after 4.1s linear;
+          animation: spinner-after 4.1s linear;
+}
+
+.ls {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  z-index: 3;
+  opacity: 0;
+  -webkit-animation: spinner-while 4s linear;
+          animation: spinner-while 4s linear;
+}
+
+.loading-spinner {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: solid #ccc 4px;
+  border-top-color: #9356dc;
+  -webkit-animation: spin 0.6s linear infinite;
+          animation: spin 0.6s linear infinite;
 }
 
 @media (min-width: 1024px) {
@@ -715,6 +806,68 @@ main {
   color: #848484;
 }
 
+@-webkit-keyframes coeur {
+  0% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(29%, #ffabc1), color-stop(87%, rgba(53, 106, 210, 0.165686)));
+    background: linear-gradient(180deg, #ffabc1 29%, rgba(53, 106, 210, 0.165686) 87%);
+    -webkit-text-stroke: 1px black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  33% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(29%, #ffabc1), color-stop(87%, rgba(53, 106, 210, 0.476611)));
+    background: linear-gradient(180deg, #ffabc1 29%, rgba(53, 106, 210, 0.476611) 87%);
+    -webkit-text-stroke: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  66% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(29%, #ffabc1), color-stop(87%, rgba(53, 106, 210, 0.692297)));
+    background: linear-gradient(180deg, #ffabc1 29%, rgba(53, 106, 210, 0.692297) 87%);
+    -webkit-text-stroke: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(29%, #ffabc1), color-stop(87%, #356ad2));
+    background: linear-gradient(180deg, #ffabc1 29%, #356ad2 87%);
+    -webkit-text-stroke: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes coeur {
+  0% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(29%, #ffabc1), color-stop(87%, rgba(53, 106, 210, 0.165686)));
+    background: linear-gradient(180deg, #ffabc1 29%, rgba(53, 106, 210, 0.165686) 87%);
+    -webkit-text-stroke: 1px black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  33% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(29%, #ffabc1), color-stop(87%, rgba(53, 106, 210, 0.476611)));
+    background: linear-gradient(180deg, #ffabc1 29%, rgba(53, 106, 210, 0.476611) 87%);
+    -webkit-text-stroke: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  66% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(29%, #ffabc1), color-stop(87%, rgba(53, 106, 210, 0.692297)));
+    background: linear-gradient(180deg, #ffabc1 29%, rgba(53, 106, 210, 0.692297) 87%);
+    -webkit-text-stroke: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(29%, #ffabc1), color-stop(87%, #356ad2));
+    background: linear-gradient(180deg, #ffabc1 29%, #356ad2 87%);
+    -webkit-text-stroke: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
 .restaurants {
   margin-top: 40px;
   background-color: whitesmoke;
@@ -908,15 +1061,109 @@ main {
           align-items: center;
   width: 20%;
   height: 100%;
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
 }
 
 .restaurants__list-figure figcaption i:hover {
-  width: auto;
-  height: auto;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-  -webkit-text-stroke: 0;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@-webkit-keyframes fadeslide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeslide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes spinner-after {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  99% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spinner-after {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  99% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes spinner-while {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spinner-while {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .restaurant-picture img {
@@ -1002,6 +1249,27 @@ main {
 .menu-list a {
   text-decoration: none;
   color: #000;
+  overflow: hidden;
+}
+
+.btn1 {
+  -webkit-animation: fadeslide 1s;
+          animation: fadeslide 1s;
+}
+
+.btn2 {
+  -webkit-animation: fadeslide 1.5s;
+          animation: fadeslide 1.5s;
+}
+
+.btn3 {
+  -webkit-animation: fadeslide 2s;
+          animation: fadeslide 2s;
+}
+
+.btn4 {
+  -webkit-animation: fadeslide 2.5s;
+          animation: fadeslide 2.5s;
 }
 
 .order {

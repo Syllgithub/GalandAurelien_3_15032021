@@ -43,19 +43,21 @@
   border-radius: 15px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 95%;
   margin: auto;
   &__text {
     white-space: nowrap;
     margin-left: 10px;
+    min-width: 50%;
     width: 80%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     strong {
+      width: 100%;
       text-overflow: ellipsis;
+      overflow: hidden;
       font-family: "Roboto-bold";
       font-size: 1.1em;
     }
@@ -69,7 +71,47 @@
   span {
     font-family: "Roboto-bold";
     align-self: flex-end;
-    margin-right: 20px;
     margin-bottom: 18px;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 20%;
+    text-align: right;
+  }
+  .cont {
+    /*position: relative;*/
+    background-color: id-colors(tertiary);
+    color: id-colors(tertiary);
+    min-width: 70px;
+    margin-right: -70px;
+    height: 100%;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: all 0.6s ease;
+    i {
+      background-color: #fff;
+      width: 25px;
+      height: 25px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: rotate(180deg);
+      transition: all 0.5s;
+      transition-delay: 300ms;
+    }
+  }
+  &:hover > .cont {
+    margin: 0;
+    transform: translateX(0);
+  }
+  &:hover > .cont i {
+    transform: rotate(0deg);
+  }
+  &:focus {
+    outline: none;
   }
 }

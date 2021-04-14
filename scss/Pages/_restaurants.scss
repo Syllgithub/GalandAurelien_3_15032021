@@ -1,3 +1,5 @@
+@import "../Utils/keyframes";
+
 .restaurant-picture img {
   width: 100%;
   height: 250px;
@@ -35,6 +37,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
     &__items {
       margin-bottom: 30px;
       display: flex;
@@ -53,7 +56,20 @@
   a {
     text-decoration: none;
     color: #000;
+    overflow: hidden;
   }
+}
+.btn1 {
+  animation: fadeslide 1s;
+}
+.btn2 {
+  animation: fadeslide 1.5s;
+}
+.btn3 {
+  animation: fadeslide 2s;
+}
+.btn4 {
+  animation: fadeslide 2.5s;
 }
 
 .order {
