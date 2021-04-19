@@ -11,6 +11,14 @@
     transform: translateY(0);
   }
 }
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes spinner-after {
   0% {
     opacity: 0.1;
@@ -35,6 +43,9 @@
 }
 @keyframes spin {
   0% {
+    transform: rotate(0deg);
+  }
+  100% {
     transform: rotate(360deg);
   }
 }
