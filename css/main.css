@@ -393,7 +393,6 @@ footer .footer__elements a {
 }
 
 .menu-btn .cont {
-  /*position: relative;*/
   background-color: #99e2d0;
   color: #99e2d0;
   min-width: 70px;
@@ -409,7 +408,6 @@ footer .footer__elements a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /*transform: translateX(1%);*/
   -webkit-transition: all 400ms linear;
   transition: all 400ms linear;
 }
@@ -439,7 +437,6 @@ footer .footer__elements a {
 
 .menu-btn:hover > .cont {
   margin: 0;
-  /*transform: translateX(0);*/
 }
 
 .menu-btn:hover > .cont i {
@@ -858,6 +855,7 @@ main {
 }
 
 .restaurants__list {
+  position: relative;
   margin-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -884,6 +882,16 @@ main {
   }
 }
 
+.restaurants__list-card {
+  position: relative;
+}
+
+@media (min-width: 576px) {
+  .restaurants__list-card {
+    width: 48%;
+  }
+}
+
 .restaurants__list a {
   text-decoration: none;
   color: #000;
@@ -891,7 +899,7 @@ main {
 
 @media (min-width: 576px) {
   .restaurants__list a {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -992,7 +1000,10 @@ main {
   font-family: "Roboto-bold";
 }
 
-.restaurants__list-figure figcaption label {
+.restaurants__list label {
+  bottom: 10%;
+  right: 10%;
+  position: absolute;
   -webkit-text-stroke: 1px black;
   color: #fff;
   font-size: 1.5em;
@@ -1005,24 +1016,24 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 20%;
-  height: 100%;
+  width: 30px;
+  height: 30px;
   -webkit-transition: -webkit-transform 200ms ease;
   transition: -webkit-transform 200ms ease;
   transition: transform 200ms ease;
   transition: transform 200ms ease, -webkit-transform 200ms ease;
 }
 
-.restaurants__list-figure figcaption label:hover {
+.restaurants__list label:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.restaurants__list-figure figcaption input[type="checkbox"].heart_fav {
+.restaurants__list input[type="checkbox"].heart_fav {
   display: none;
 }
 
-.restaurants__list-figure figcaption input[type="checkbox"].heart_fav + label::before {
+.restaurants__list input[type="checkbox"].heart_fav + label::before {
   font-family: "FontAwesome";
   content: "\f004";
   font-size: 1.2em;
@@ -1030,7 +1041,7 @@ main {
   -webkit-text-fill-color: transparent;
 }
 
-.restaurants__list-figure figcaption input[type="checkbox"].heart_fav:checked + label::before {
+.restaurants__list input[type="checkbox"].heart_fav:checked + label::before {
   -webkit-animation: fade 1s;
           animation: fade 1s;
   background-image: -webkit-linear-gradient(#ff79da, #9356dc);
